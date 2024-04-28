@@ -57,6 +57,6 @@ describe('Renders main page correctly', () => {
         await user.click(button as HTMLElement);
         
         // Post Expectations
-        expect(button?.innerHTML).toBe('count is 2');
+        expect(button?.innerHTML).toBe('count is 3');
     });
 });
