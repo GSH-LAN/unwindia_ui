@@ -1,0 +1,28 @@
+version: 2
+updates:
+  - package-ecosystem: "npm"
+    directory: "/"
+    registries: "*"
+    schedule:
+      interval: "weekly"
+      day: "sunday"
+      time: "04:00"
+      timezone: "Europe/Berlin"
+    versioning-strategy: "increase"
+    labels:
+      - "dependencies"
+    open-pull-requests-limit: 10
+    groups:
+      eslint:
+        patterns:
+          - "*eslint*"
+          - "eslint*"
+          - "eslint"
+      dev-dependencies:
+        patterns:
+          - "*"
+        exclude-patterns:
+          - "typescript"
+          - "*eslint*"
+          - "eslint*"
+          - "eslint"
